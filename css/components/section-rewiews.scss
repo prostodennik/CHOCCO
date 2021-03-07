@@ -1,0 +1,18 @@
+.section-rewiews {
+    background: url(../../img/berries_reviews.svg) top right no-repeat;
+    position: relative;
+
+    &::before {
+        content: url(../../img/pattern_rewievs.svg);
+        position: absolute;
+        bottom: -160px;
+        left: 0;
+    }
+
+    &::after {
+        content: url(../../img/berries_reviews2.svg);
+        position: absolute;
+        bottom: -80px;
+        left: 0;
+    }
+}

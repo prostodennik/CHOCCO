@@ -1,0 +1,51 @@
+.hero {
+    background: url(../img/granola_bar.png)right center / 40% auto no-repeat , 
+    url(../img/pattern.png)right bottom / 40% no-repeat;
+    background-color: $blue;
+    height: 100vh;
+    min-height: 650px;
+    color: #fff;
+    padding: 25px 0 35px;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        bottom: -60px;
+        left: 2%;
+        content: url(../../img/leaf_3.svg);
+    }
+
+    &::after {
+        content: url(../../img/berries-1.svg) url(../../img/leaf_2.svg) url(../../img/leaf_1.svg) url(../../img/berries_2.svg);
+        position: absolute;
+        bottom: -40px;
+        right: 8%;
+        column-count: 2;
+        width: 400px;
+    }
+}
+
+.hero__title-section {
+    width: 50%;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.hero__main-title {
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.hero__title-desc {
+    font-size: 21px;
+    margin-bottom: 60px;
+    padding-right: 15%;
+}
