@@ -10,6 +10,10 @@
     &_active {
         border-color: #365A49;
     }
+
+    &:hover {
+        border-color: #365A49;
+    }
 }
 
 .reviews__switcher-link {
@@ -19,6 +23,10 @@
     bottom: 0;
     right: 0;
     display: block;
+
+    &:hover {
+        border-color: #365A49;
+    }
 }
 
 .interactive-avatar__img {
