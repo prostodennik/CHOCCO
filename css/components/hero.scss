@@ -40,11 +40,11 @@
         position: absolute;
         bottom: -80px;
         left: -5%;
-        content: url(../../img/leaf_3.svg);
+        content: url(../img/leaf_3.svg);
     }
 
     &::after {
-        content: url(../../img/berries-1.svg) url(../../img/leaf_2.svg) url(../../img/leaf_1.svg) url(../../img/berries_2.svg);
+        content: url(../img/berries-1.svg) url(../img/leaf_2.svg) url(../img/leaf_1.svg) url(../img/berries_2.svg);
         position: absolute;
         bottom: -70px;
         right: 0%;
