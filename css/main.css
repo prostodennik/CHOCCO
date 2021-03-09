@@ -214,6 +214,7 @@ img {
   background: transparent;
   color: #000;
   text-decoration: none;
+  font-weight: bold;
 }
 .btn_theme_transparent:hover {
   color: #497870;
@@ -437,7 +438,20 @@ img {
 }
 
 .order-section {
-  background: url(../img/berries_order.svg) bottom 10% left 3% no-repeat, url(../img/leaf_order.svg) bottom 10% right 3% no-repeat, url(../img/order.png) center/cover no-repeat;
+  background: url(../img/order.png) center/cover no-repeat;
+}
+
+.order-container::before {
+  position: absolute;
+  bottom: 0;
+  left: -5%;
+  content: url(../img/berries_order.svg);
+}
+.order-container::after {
+  content: url(../img/leaf_order.svg);
+  position: absolute;
+  bottom: 0;
+  right: -10%;
 }
 
 .form {
@@ -468,12 +482,12 @@ img {
 .form__input {
   width: 100%;
   border: none;
-  padding: 18px 11px;
+  padding: 17px 11px;
   border: solid 3px transparent;
   border-radius: 4px;
 }
 .form__input_textarea {
-  height: 180px;
+  height: 163px;
   resize: none;
 }
 .form__input:focus {
@@ -485,9 +499,11 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 16px;
+  padding: 18px 0 0;
 }
 .form__controls:nth-last-child(2) {
   margin-bottom: 44px;
+  padding: 0 0 0;
 }
 
 .radio {

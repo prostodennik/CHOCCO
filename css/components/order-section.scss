@@ -1,5 +1,22 @@
 .order-section {
-    background:url(../img/berries_order.svg) bottom 10% left 3% no-repeat, url(../img/leaf_order.svg) bottom 10% right 3% no-repeat, url(../img/order.png)center/cover no-repeat ;
+    background: url(../img/order.png)center/cover no-repeat ;
 
     
+}
+
+.order-container {
+
+    &::before {
+        position: absolute;
+        bottom: 0;
+        left: -5%;
+        content: url(../img/berries_order.svg);
+    }
+
+    &::after {
+        content: url(../img/leaf_order.svg);
+        position: absolute;
+        bottom: 0;
+        right: -10%;
+    }
 }
