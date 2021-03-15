@@ -1,7 +1,17 @@
 .order-section {
     background: url(../img/order.png)center/cover no-repeat ;
 
-    
+    @include tablets {
+        // min-height: 59rem;
+        height: auto;
+        padding: rem(180px) 0 rem(180px);
+    }
+
+    @include phones {
+        // min-height: 50rem;
+        height: auto;
+        padding: rem(80px) 0 rem(80px);
+    }
 }
 
 .order-container {
@@ -11,6 +21,10 @@
         bottom: 0;
         left: -5%;
         content: url(../img/berries_order.svg);
+
+        @include phones {
+            display: none;
+        }
     }
 
     &::after {
@@ -18,5 +32,10 @@
         position: absolute;
         bottom: 0;
         right: -10%;
+
+        @include phones {
+            display: none;
+        }
     }
+    
 }

@@ -1,0 +1,13 @@
+.section-contacts {
+    background: url(../img/map.svg) center/cover no-repeat;
+
+    @include tablets {
+        // min-height: 59rem;
+        height: auto;
+    }
+
+    @include phones {
+        // min-height: 50rem;
+        height: auto;
+    }
+}

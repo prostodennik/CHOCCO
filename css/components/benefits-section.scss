@@ -2,10 +2,28 @@
     position: relative;
     background: url(../img/pattern_leaf.svg) left top 57% no-repeat;
 
+    @include tablets {
+        // min-height: 59rem;
+        height: auto;
+        background-position: left top 10%;
+        padding: rem(280px) 0 rem(260px);
+    }
+
+    @include phones {
+        background: none;
+        // min-height: 50rem;
+        height: auto;
+        padding: rem(52px) 0 rem(54px);
+    }
+
     &::before {
         content: url(../img/raspberries.svg);
         position: absolute;
-        bottom: -80px;
+        bottom: rem(-180px);
         left: 0;
+
+        @include phones {
+            display: none;
+        }
     }
 }

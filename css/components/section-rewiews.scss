@@ -2,17 +2,29 @@
     background: url(../img/berries_reviews.svg) top right no-repeat;
     position: relative;
 
+    @include tablets {
+        // min-height: 59rem;
+        height: auto;
+        padding: rem(180px) 0 rem(180px);
+    }
+
+    @include phones {
+        // min-height: 50rem;
+        height: auto;
+        padding: rem(100px) 0 rem(85px);
+    }
+
     &::before {
         content: url(../img/pattern_rewievs.svg);
         position: absolute;
-        bottom: -160px;
+        bottom: rem(-160px);
         left: 0;
     }
 
     &::after {
         content: url(../img/berries_reviews2.svg);
         position: absolute;
-        bottom: -80px;
+        bottom: rem(-80px);
         left: 0;
     }
 }
