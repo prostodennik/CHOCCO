@@ -46,6 +46,7 @@
     @include tablets {
         width: rem(130px);
         height: rem(130px);
+        margin-bottom: rem(32px);
     }
 }
 
@@ -58,13 +59,22 @@
 .reviews__content {
     flex: 1;
     margin-left: rem(20px);
+
+    @include tablets {
+        margin-left: 0;
+        max-width: 677px;
+    } 
 }
 
 .reviews__title {
     font-size: rem(30px);
     font-weight: bold;
-    margin-bottom: rem(22px);
+    margin-bottom: rem(15px);
     color: black;
+
+    @include tablets {
+        font-size: rem(29px);
+    }
 }
 
 .reviews__text {
@@ -73,6 +83,7 @@
     padding: 0 23% 0 0;
 
     @include tablets {
+        margin-bottom: rem(16px);
         padding: 0;
     }
 }

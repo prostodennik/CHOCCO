@@ -11,6 +11,7 @@ html {
 @media screen and (max-width: 480px) {
   html {
     font-size: 16px;
+    font-size: 2.3vmax;
   }
 }
 
@@ -93,16 +94,12 @@ img {
 }
 @media screen and (max-width: 768px) {
   .hero {
-    height: auto;
     background-position: right bottom 71%;
-    padding-bottom: 10rem;
   }
 }
 @media screen and (max-width: 480px) {
   .hero {
-    height: auto;
     background-size: contain;
-    padding-bottom: 5.5555555556rem;
   }
 }
 
@@ -120,7 +117,17 @@ img {
     text-align: center;
   }
   .hero__title-section::before {
-    content: url(../img/comp768.png);
+    content: "";
+    display: block;
+    background: url(../img/comp768.png) center center/contain no-repeat;
+    width: 75%;
+    height: 21.3888888889rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero__title-section::before {
+    width: 75%;
+    height: 18.7777777778rem;
   }
 }
 
@@ -169,19 +176,26 @@ img {
   margin-bottom: 0.8333333333rem;
   text-transform: uppercase;
 }
+@media screen and (max-width: 768px) {
+  .hero__main-title {
+    margin-bottom: 0.2222222222rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero__main-title {
+    font-size: 2.5rem;
+  }
+}
 
 .hero__title-desc {
   font-size: 1.1666666667rem;
   margin-bottom: 1.6666666667rem;
+  max-width: 371px;
 }
 @media screen and (max-width: 768px) {
   .hero__title-desc {
-    padding: 0 25%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .hero__title-desc {
-    padding: 0 7%;
+    max-width: 350px;
+    margin-bottom: 1.2777777778rem;
   }
 }
 
@@ -338,6 +352,11 @@ img {
   text-align: center;
   color: #292929;
 }
+@media screen and (max-width: 480px) {
+  .section__title {
+    font-size: 2.2222222222rem;
+  }
+}
 
 .headline {
   text-align: center;
@@ -345,7 +364,12 @@ img {
 }
 
 .headline__title {
-  margin-bottom: 1.3888888889rem;
+  margin-bottom: 0.7777777778rem;
+}
+@media screen and (max-width: 480px) {
+  .headline__title {
+    margin-top: 2.8888888889rem;
+  }
 }
 
 .headline__subtile {
@@ -440,6 +464,8 @@ img {
 
 .benefit__title {
   font-size: 1.5rem;
+  line-height: 2.3333333333rem;
+  margin-bottom: 0.8888888889rem;
   font-weight: bold;
   color: #292929;
 }
@@ -457,7 +483,8 @@ img {
 
 @media screen and (max-width: 480px) {
   .benefit__desc {
-    padding: 0 17% 0 0;
+    font-size: 1rem;
+    max-width: 260px;
   }
 }
 
@@ -467,16 +494,12 @@ img {
 }
 @media screen and (max-width: 768px) {
   .benefits-section {
-    height: auto;
     background-position: left top 10%;
-    padding: 15.5555555556rem 0 14.4444444444rem;
   }
 }
 @media screen and (max-width: 480px) {
   .benefits-section {
     background: none;
-    height: auto;
-    padding: 2.8888888889rem 0 3rem;
   }
 }
 .benefits-section::before {
@@ -534,6 +557,7 @@ img {
   .reviews__avatar {
     width: 7.2222222222rem;
     height: 7.2222222222rem;
+    margin-bottom: 1.7777777778rem;
   }
 }
 
@@ -547,12 +571,23 @@ img {
   flex: 1;
   margin-left: 1.1111111111rem;
 }
+@media screen and (max-width: 768px) {
+  .reviews__content {
+    margin-left: 0;
+    max-width: 677px;
+  }
+}
 
 .reviews__title {
   font-size: 1.6666666667rem;
   font-weight: bold;
-  margin-bottom: 1.2222222222rem;
+  margin-bottom: 0.8333333333rem;
   color: black;
+}
+@media screen and (max-width: 768px) {
+  .reviews__title {
+    font-size: 1.6111111111rem;
+  }
 }
 
 .reviews__text {
@@ -561,6 +596,7 @@ img {
 }
 @media screen and (max-width: 768px) {
   .reviews__text {
+    margin-bottom: 0.8888888889rem;
     padding: 0;
   }
 }
@@ -611,45 +647,42 @@ img {
   background: url(../img/berries_reviews.svg) top right no-repeat;
   position: relative;
 }
-@media screen and (max-width: 768px) {
-  .section-rewiews {
-    height: auto;
-    padding: 10rem 0 10rem;
-  }
-}
 @media screen and (max-width: 480px) {
   .section-rewiews {
-    height: auto;
-    padding: 5.5555555556rem 0 4.7222222222rem;
+    background-size: 30%;
   }
 }
 .section-rewiews::before {
-  content: url(../img/pattern_rewievs.svg);
+  content: "";
+  background: url(../img/pattern_rewievs.svg) center center/contain no-repeat;
+  width: 5.6666666667rem;
+  height: 17.7777777778rem;
   position: absolute;
   bottom: -8.8888888889rem;
   left: 0;
 }
+@media screen and (max-width: 480px) {
+  .section-rewiews::before {
+    width: 12%;
+  }
+}
 .section-rewiews::after {
-  content: url(../img/berries_reviews2.svg);
+  content: "";
+  background: url(../img/berries_reviews2.svg) center center/contain no-repeat;
+  width: 7.5rem;
+  height: 10.7222222222rem;
   position: absolute;
   bottom: -4.4444444444rem;
   left: 0;
 }
+@media screen and (max-width: 480px) {
+  .section-rewiews::after {
+    width: 15%;
+  }
+}
 
 .order-section {
   background: url(../img/order.png) center/cover no-repeat;
-}
-@media screen and (max-width: 768px) {
-  .order-section {
-    height: auto;
-    padding: 10rem 0 10rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .order-section {
-    height: auto;
-    padding: 4.4444444444rem 0 4.4444444444rem;
-  }
 }
 
 .order-container::before {
@@ -681,12 +714,14 @@ img {
 @media screen and (max-width: 768px) {
   .form {
     flex-direction: column;
-    padding: 0 17%;
+    max-width: 466px;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 480px) {
   .form {
     padding: 0;
+    max-width: 25.5555555556rem;
   }
 }
 
@@ -721,15 +756,26 @@ img {
   border: none;
   padding: 0.9444444444rem 0.6111111111rem;
   border: solid 0.1666666667rem transparent;
-  border-radius: 0.2222222222rem;
+  border-radius: 4px;
 }
 .form__input_textarea {
   height: 9.0555555556rem;
   resize: none;
 }
+@media screen and (max-width: 768px) {
+  .form__input_textarea {
+    height: 4.5555555556rem;
+  }
+}
 .form__input:focus {
   border-color: #DEE2BD;
   outline: none;
+}
+@media screen and (max-width: 768px) {
+  .form__input {
+    padding: 0.4444444444rem 0.5555555556rem;
+    font-size: 0.7777777778rem;
+  }
 }
 
 .form__controls {
@@ -740,6 +786,11 @@ img {
 .form__controls:nth-last-child(2) {
   margin-bottom: 2.4444444444rem;
   padding: 0 0 0;
+}
+@media screen and (max-width: 768px) {
+  .form__controls {
+    padding: 0;
+  }
 }
 @media screen and (max-width: 480px) {
   .form__controls {
@@ -806,9 +857,8 @@ img {
 
 .fixed-menu {
   position: fixed;
-  position: fixed;
-  top: 10rem;
-  right: 1.7777777778rem;
+  top: 11.1111111111rem;
+  right: calc(50% - 530px);
   z-index: 100;
 }
 @media screen and (max-width: 768px) {
@@ -846,17 +896,8 @@ img {
 }
 
 .section-contacts {
+  position: relative;
   background: url(../img/map.svg) center/cover no-repeat;
-}
-@media screen and (max-width: 768px) {
-  .section-contacts {
-    height: auto;
-  }
-}
-@media screen and (max-width: 480px) {
-  .section-contacts {
-    height: auto;
-  }
 }
 
 .footer-container {
@@ -882,7 +923,7 @@ img {
   left: 0;
   right: 0;
   background: #fff;
-  padding: rev(23px) 0;
+  padding: 1.2777777778rem 0;
 }
 
 .phone-number_footer {
@@ -935,11 +976,13 @@ img {
 }
 
 .hamburger {
-  min-width: 1.3333333333rem;
-  min-height: 1.1111111111rem;
+  min-width: 1.4444444444rem;
+  min-height: 1.2777777778rem;
   flex-direction: column;
   justify-content: space-between;
   display: none;
+  margin-top: 0.3333333333rem;
+  margin-right: 1.4444444444rem;
 }
 @media screen and (max-width: 768px) {
   .hamburger {

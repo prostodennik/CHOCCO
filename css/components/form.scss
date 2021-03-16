@@ -3,11 +3,13 @@
 
     @include tablets {
         flex-direction: column;
-        padding: 0 17%;
+        max-width: 466px;
+        margin: 0 auto;
     }
 
     @include phones {
         padding: 0;
+        max-width: rem(460px);
     }
 }
 
@@ -43,16 +45,25 @@
     border: none;
     padding: rem(17px) rem(11px);
     border: solid rem(3px) transparent;
-    border-radius: rem(4px);
+    border-radius: 4px ;
 
     &_textarea {
         height: rem(163px);
         resize: none;
+
+        @include tablets {
+            height: rem(82px);
+        }
     }
 
     &:focus {
         border-color: #DEE2BD;
         outline: none;
+    }
+
+    @include tablets {
+        padding: rem(8px) rem(10px);
+        font-size: rem(14px);
     }
 }
 
@@ -67,6 +78,10 @@
         padding: 0 0 0;
     }
     
+    @include tablets {
+        padding: 0;
+    }
+
     @include phones {
         justify-content: center;
     }

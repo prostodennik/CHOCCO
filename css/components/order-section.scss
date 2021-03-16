@@ -1,17 +1,5 @@
 .order-section {
-    background: url(../img/order.png)center/cover no-repeat ;
-
-    @include tablets {
-        // min-height: 59rem;
-        height: auto;
-        padding: rem(180px) 0 rem(180px);
-    }
-
-    @include phones {
-        // min-height: 50rem;
-        height: auto;
-        padding: rem(80px) 0 rem(80px);
-    }
+    background: url(../img/order.png)center/cover no-repeat;
 }
 
 .order-container {

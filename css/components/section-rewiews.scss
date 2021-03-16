@@ -2,29 +2,35 @@
     background: url(../img/berries_reviews.svg) top right no-repeat;
     position: relative;
 
-    @include tablets {
-        // min-height: 59rem;
-        height: auto;
-        padding: rem(180px) 0 rem(180px);
-    }
-
     @include phones {
-        // min-height: 50rem;
-        height: auto;
-        padding: rem(100px) 0 rem(85px);
+        background-size: 30%;
     }
 
     &::before {
-        content: url(../img/pattern_rewievs.svg);
+        content: "";
+        background: url(../img/pattern_rewievs.svg) center center / contain no-repeat;
+        width: rem(102px);
+        height: rem(320px);
         position: absolute;
         bottom: rem(-160px);
         left: 0;
+
+        @include phones {
+            width: 12%;
+        }
     }
 
     &::after {
-        content: url(../img/berries_reviews2.svg);
+        content: "";
+        background: url(../img/berries_reviews2.svg) center center / contain no-repeat;
+        width: rem(135px);
+        height: rem(193px);
         position: absolute;
         bottom: rem(-80px);
         left: 0;
+
+        @include phones {
+            width: 15%;
+        }
     }
 }

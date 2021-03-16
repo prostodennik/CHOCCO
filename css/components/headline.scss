@@ -4,7 +4,11 @@
 }
 
 .headline__title {
-    margin-bottom: rem(25px);
+    margin-bottom: rem(14px);
+
+    @include phones {
+        margin-top: rem(52px);
+    }
 }
 
 .headline__subtile {

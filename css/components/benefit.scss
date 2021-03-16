@@ -29,6 +29,8 @@
 
 .benefit__title {
     font-size: rem(27px);
+    line-height: rem(42px);
+    margin-bottom: rem(16px);
     font-weight: bold;
     color: #292929;
 
@@ -44,7 +46,9 @@
 }
 
 .benefit__desc {
+    
     @include phones {
-        padding: 0 17% 0 0;
+        font-size: rem(18px);
+        max-width: 260px;
     }
 }

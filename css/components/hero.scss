@@ -9,17 +9,13 @@
     position: relative;
 
     @include tablets {
-        // min-height: 59rem;
-        height: auto;
         background-position: right bottom 71%;
-        padding-bottom: rem(180px);
+        // padding-bottom: rem(180px);
     }
 
     @include phones {
-        // min-height: 50rem;
-        height: auto;
         background-size: contain;
-        padding-bottom: rem(100px);
+        // padding-bottom: rem(100px);
     }
 
     // &::before {
@@ -52,7 +48,17 @@
         text-align: center;
 
         &::before {
-            content: url(../img/comp768.png);
+            content: "";
+            display: block;
+            background: url(../img/comp768.png) center center / contain no-repeat;
+            width: 75%;
+            height: rem(385px);
+        }
+    }
+    @include phones {
+        &::before {
+            width: 75%;
+            height: rem(338px);
         }
     }
 }
@@ -103,18 +109,23 @@
     font-weight: bold;
     margin-bottom: rem(15px);
     text-transform: uppercase;
+
+    @include tablets {
+    margin-bottom: rem(4px);
+    }
+
+    @include phones {
+        font-size: rem(45px);
+    }
 }
 
 .hero__title-desc {
     font-size: rem(21px);
     margin-bottom: rem(30px);
-    // padding-right: 15%;
+    max-width: 371px;
 
     @include tablets {
-        padding: 0 25%;
-    }
-
-    @include phones {
-        padding: 0 7%;
+        max-width: 350px;
+        margin-bottom: rem(23px);
     }
 }
