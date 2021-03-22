@@ -15,6 +15,12 @@
         position: absolute;
         bottom: rem(-180px);
         left: 0;
+        // content: "";
+        // background: url(../img/raspberries.svg) center center/contain no-repeat;
+        // position: absolute;
+        // width: rem(196px);
+        // height: rem(453px);
+        // bottom: rem(-222px);
 
         @include phones {
             display: none;

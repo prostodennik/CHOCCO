@@ -6,6 +6,7 @@
     display: none;
     margin-top: rem(6px);
     margin-right: rem(26px);
+    cursor: pointer;
 
     @include tablets {
         display: inline-flex;
@@ -18,3 +19,4 @@
     height: 4px;
     border-radius: 10px;
 }
+

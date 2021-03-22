@@ -1,0 +1,221 @@
+.about-section {
+    background: #F8FAF9;
+    position: relative;
+    &::before {
+        content: "";
+        background: url(../../img/about.png) center center/contain no-repeat;
+        position: absolute;
+        width: rem(196px);
+        height: rem(453px);
+        right: 0;
+        bottom: rem(-230px);
+    }
+
+    &::after {
+        content: "";
+        background: url(../../img/blueberry.png) center center/contain no-repeat;
+        position: absolute;
+        width: rem(135px);
+        height: rem(112px);
+        right: 0;
+        bottom: rem(-50px);
+    }
+}
+
+.arrow { 
+    position: absolute;
+    top: 50%;
+
+    @include tablets {
+        top: 25%;
+    }
+
+    &_prev {
+        @include tablets {
+            left: 25%;
+        }
+    }
+
+    &_next {
+        right: 0;
+
+        @include tablets {
+            right: 20%;
+        }
+    }
+}
+
+.arrow__left {
+    width: rem(24px);
+    height: rem(24px);
+    border-bottom: 4px solid #000000;
+    border-left: 4px solid #000000;
+    transform: rotate(45deg);
+    border-radius: 5px;
+}
+
+.arrow__right {
+    width: rem(24px);
+    height: rem(24px);
+    border-bottom: 4px solid #000000;
+    border-left: 4px solid #000000;
+    transform: rotate(225deg);
+    border-radius: 5px;
+}
+
+.shop {
+    display: flex;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.products__img-images {
+    max-width: 450px;
+    max-height: 400px;
+}
+
+.about__composition {
+    display: flex;
+    position: relative;
+    width: rem(91px);
+    height: rem(91px);
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.about {
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.about__image-images {
+    width: rem(32px);
+    height: rem(32px);
+    fill: #000000;
+}
+
+.about__dropdown {
+    min-width: 273px;
+    height: 344px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 0.7222222222rem 1.2222222222rem 0.7777777778rem;
+    background-color: #e7e7e7;
+    display: none; 
+    position: absolute;
+    top: 0;
+    left: rem(91px);
+    border-radius: 5px;
+}
+
+.about__icon {
+    width: rem(91px);
+    height: rem(91px);
+    background: #86C3D7;
+    border-radius: 3px;
+    padding: rem(12px) rem(23px);
+}
+
+.about__composition:hover .about__dropdown {
+    display: flex;
+}
+
+.about__text {
+    max-width: 368px;
+    margin: 0 0 rem(23px);
+
+    @include tablets {
+        max-width: 510px;
+        text-align: center;
+    }
+}
+
+.about__content {
+
+    @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    @include phones {
+        max-width: 380px;
+    }
+}
+
+.about__icon-text {
+    font-size: rem(14px);
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+}
+
+.about__title {
+    text-transform: uppercase;
+    font-size: rem(36px);
+    min-width: 374px;
+    color: #292929;
+    font-weight: bold;
+    margin: rem(23px) 0 rem(22px);
+
+    @include phones {
+        text-align: center;
+    }
+}
+
+.about__icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about__icon-images {
+    width: rem(46px);
+    height: rem(46px);
+    fill: #fff;
+}
+
+.about__item {
+    margin-right: rem(44px);
+}
+
+.about__item-dropdown {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__text-dropdown {
+    width: rem(127px);
+    height: rem(24px);
+}
+
+.about__list {
+    display: flex;
+}
+
+.about__desc_bold {
+    font-weight: bold;
+    color: #292929;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    font-size: rem(60px);
+    color: #292929;
+}
+
+.price__item {
+    margin: 0 rem(30px) 0 0;
+}
