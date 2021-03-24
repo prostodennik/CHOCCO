@@ -505,8 +505,9 @@ img {
 .benefits-section::before {
   content: url(../img/raspberries.svg);
   position: absolute;
-  bottom: -10rem;
+  bottom: -8.3333333333rem;
   left: 0;
+  z-index: 1;
 }
 @media screen and (max-width: 480px) {
   .benefits-section::before {
@@ -1032,21 +1033,25 @@ img {
   position: fixed;
   top: 0.2777777778rem;
   right: 0.2777777778rem;
-  width: 3.0555555556rem;
-  height: 3.0555555556rem;
+  width: 1.1111111111rem;
+  height: 1.1111111111rem;
   cursor: pointer;
+  margin: 1.6666666667rem 2.3333333333rem 0 0;
 }
 
 .close:before,
 .close:after {
   content: "";
   position: absolute;
-  top: 2.3333333333rem;
-  right: 2.3333333333rem;
+  top: 0;
+  right: 0;
   width: 1.1111111111rem;
   height: 0.2222222222rem;
   background: #fff;
   border-radius: 5px;
+  left: 0;
+  margin: auto;
+  bottom: 0;
 }
 
 .close:before {
@@ -1070,6 +1075,11 @@ img {
   right: 0;
   bottom: -12.7777777778rem;
 }
+@media screen and (max-width: 480px) {
+  .about-section::before {
+    width: 5.5555555556rem;
+  }
+}
 .about-section::after {
   content: "";
   background: url(../../img/blueberry.png) center center/contain no-repeat;
@@ -1079,28 +1089,22 @@ img {
   right: 0;
   bottom: -2.7777777778rem;
 }
+@media screen and (max-width: 480px) {
+  .about-section::after {
+    width: 3.6111111111rem;
+  }
+}
 
 .arrow {
   position: absolute;
-  top: 50%;
-}
-@media screen and (max-width: 768px) {
-  .arrow {
-    top: 25%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .arrow_prev {
-    left: 25%;
-  }
+  top: 11.1111111111rem;
+  border: 0;
+  background: transparent;
+  outline: none;
+  max-width: 939px;
 }
 .arrow_next {
   right: 0;
-}
-@media screen and (max-width: 768px) {
-  .arrow_next {
-    right: 20%;
-  }
 }
 
 .arrow__left {
@@ -1131,9 +1135,80 @@ img {
   }
 }
 
-.products__img-images {
-  max-width: 450px;
-  max-height: 400px;
+.products {
+  margin-right: 5.2222222222rem;
+  padding: 1.9444444444rem 0 0;
+}
+.products::before {
+  content: "";
+  background-color: #86C3D7;
+  position: absolute;
+  top: 7.9444444444rem;
+  left: 2.4444444444rem;
+  bottom: 0;
+  right: 0;
+  /* margin: auto; */
+  width: 21.1111111111rem;
+  height: 14.4444444444rem;
+  border-radius: 380px 315px 197px 96px/364px 182px 162px 121px;
+  transform: rotate(161deg);
+}
+@media screen and (max-width: 768px) {
+  .products::before {
+    top: 0;
+    left: 5.6666666667rem;
+    bottom: 14.4444444444rem;
+    right: 0;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .products::before {
+    transform: rotate(167deg);
+    left: 3rem;
+    top: -0.8333333333rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .products {
+    margin: 0 0 3.0555555556rem;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .products {
+    margin: 0 0 1.6666666667rem;
+  }
+}
+
+.products__img {
+  position: relative;
+  background: url(../../img/granola_about.png) center center/contain no-repeat;
+  width: 20.1666666667rem;
+  height: 21.4444444444rem;
+}
+.products__img::before {
+  content: "";
+  background: url(../../img/leaf_about_2.png) no-repeat;
+  position: absolute;
+  /* top: 0; */
+  /* left: 0; */
+  bottom: -3.5555555556rem;
+  right: 0;
+  width: 100px;
+  height: 75px;
+}
+.products__img::after {
+  content: "";
+  background: url(../../img/leaf_about.png) no-repeat;
+  position: absolute;
+  top: 5.5555555556rem;
+  left: -1.6666666667rem;
+  right: 0;
+  bottom: 0;
+  /* margin: auto; */
+  width: 75px;
+  height: 92px;
 }
 
 .about__composition {
@@ -1170,11 +1245,13 @@ img {
   justify-content: space-between;
   padding: 1rem 0.7222222222rem 1.2222222222rem 0.7777777778rem;
   background-color: #e7e7e7;
-  display: none;
   position: absolute;
   top: 0;
-  left: 5.0555555556rem;
+  left: 100%;
   border-radius: 5px;
+  opacity: 0;
+  left: -9999px;
+  transition: opacity 0.3s;
 }
 
 .about__icon {
@@ -1186,7 +1263,8 @@ img {
 }
 
 .about__composition:hover .about__dropdown {
-  display: flex;
+  opacity: 1;
+  left: 100%;
 }
 
 .about__text {
@@ -1223,7 +1301,7 @@ img {
 .about__title {
   text-transform: uppercase;
   font-size: 2rem;
-  min-width: 374px;
+  min-width: initial;
   color: #292929;
   font-weight: bold;
   margin: 1.2777777778rem 0 1.2222222222rem;
@@ -1231,6 +1309,8 @@ img {
 @media screen and (max-width: 480px) {
   .about__title {
     text-align: center;
+    max-width: 374px;
+    line-height: 2rem;
   }
 }
 

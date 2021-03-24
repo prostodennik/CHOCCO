@@ -9,6 +9,10 @@
         height: rem(453px);
         right: 0;
         bottom: rem(-230px);
+
+        @include phones {
+            width: rem(100px);
+        }
     }
 
     &::after {
@@ -19,29 +23,37 @@
         height: rem(112px);
         right: 0;
         bottom: rem(-50px);
+
+        @include phones {
+            width: rem(65px);
+        }
     }
 }
 
 .arrow { 
     position: absolute;
-    top: 50%;
+    top: rem(200px);
+    border: 0;
+    background: transparent;
+    outline: none;
+    max-width: 939px;
 
     @include tablets {
-        top: 25%;
+        
     }
 
     &_prev {
         @include tablets {
-            left: 25%;
+            // left: 25%;
         }
     }
 
     &_next {
         right: 0;
 
-        @include tablets {
-            right: 20%;
-        }
+        // @include tablets {
+        //     right: 20%;
+        // }
     }
 }
 
@@ -72,9 +84,78 @@
     }
 }
 
-.products__img-images {
-    max-width: 450px;
-    max-height: 400px;
+.products {
+    margin-right: rem(94px);
+    padding: rem(35px) 0 0;
+
+    &::before {
+        content: "";
+        background-color: #86C3D7;
+        position: absolute;
+        top: rem(143px);
+        left: rem(44px);
+        bottom: 0;
+        right: 0;
+        /* margin: auto; */
+        width: rem(380px);
+        height: rem(260px);
+        border-radius: 380px 315px 197px 96px/364px 182px 162px 121px;
+        transform: rotate(161deg);
+
+        @include tablets {
+            top: 0;
+            left: rem(102px);
+            bottom: rem(260px);
+            right: 0;
+            margin: auto;
+        }
+
+        @include phones {
+            transform: rotate(167deg);
+            left: rem(54px);
+            top: rem(-15px);
+        }
+    }
+
+    @include tablets {
+        margin: 0 0 rem(55px);
+        padding: 0;
+    }
+
+    @include phones {
+        margin: 0 0 rem(30px);
+    }
+}
+
+.products__img {
+    position: relative;
+    background: url(../../img/granola_about.png)center center / contain no-repeat;
+    width: rem(363px);
+    height: rem(386px);
+
+    &::before {
+        content: "";
+        background: url(../../img/leaf_about_2.png) no-repeat;
+        position: absolute;
+        /* top: 0; */
+        /* left: 0; */
+        bottom: rem(-64px);
+        right: 0;
+        width: 100px;
+        height: 75px; 
+    }
+    &::after {
+        content: "";
+        background: url(../../img/leaf_about.png) no-repeat;
+        position: absolute;
+        top: rem(100px);
+        left: rem(-30px);
+        right: 0;
+        bottom: 0;
+        /* margin: auto; */
+        width: 75px;
+        height: 92px;
+    }
 }
 
 .about__composition {
@@ -111,11 +192,14 @@
     justify-content: space-between;
     padding: 1rem 0.7222222222rem 1.2222222222rem 0.7777777778rem;
     background-color: #e7e7e7;
-    display: none; 
+    // display: none; 
     position: absolute;
     top: 0;
-    left: rem(91px);
+    left: 100%;
     border-radius: 5px;
+    opacity:0;
+    left:-9999px;
+    transition:opacity .3s;
 }
 
 .about__icon {
@@ -127,7 +211,8 @@
 }
 
 .about__composition:hover .about__dropdown {
-    display: flex;
+    opacity:1;
+    left:100%;
 }
 
 .about__text {
@@ -163,13 +248,15 @@
 .about__title {
     text-transform: uppercase;
     font-size: rem(36px);
-    min-width: 374px;
+    min-width: initial;
     color: #292929;
     font-weight: bold;
     margin: rem(23px) 0 rem(22px);
 
     @include phones {
         text-align: center;
+        max-width: 374px;
+        line-height: rem(36px);
     }
 }
 

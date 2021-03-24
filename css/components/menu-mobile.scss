@@ -34,22 +34,25 @@
     position: fixed;
     top: rem(5px);
     right: rem(5px);
-    width: rem(55px);
-    height: rem(55px);
+    width: rem(20px);
+    height: rem(20px);
     cursor: pointer;
-    
+    margin: rem(30px) rem(42px) 0 0;
 }
 
 .close:before,
 .close:after {
     content: "";
     position: absolute;
-    top: rem(42px);
-    right: rem(42px);
+    top: 0;
+    right: 0;
     width: rem(20px);
     height: rem(4px);
     background: #fff;
     border-radius: 5px;
+    left: 0;
+    margin: auto;
+    bottom: 0;
 }
 
 .close:before {

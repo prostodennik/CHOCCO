@@ -13,8 +13,9 @@
     &::before {
         content: url(../img/raspberries.svg);
         position: absolute;
-        bottom: rem(-180px);
+        bottom: rem(-150px);
         left: 0;
+        z-index: 1;
         // content: "";
         // background: url(../img/raspberries.svg) center center/contain no-repeat;
         // position: absolute;
