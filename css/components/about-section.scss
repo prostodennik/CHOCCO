@@ -3,7 +3,7 @@
     position: relative;
     &::before {
         content: "";
-        background: url(../../img/about.png) center center/contain no-repeat;
+        background: url(../img/about.png) center center/contain no-repeat;
         position: absolute;
         width: rem(196px);
         height: rem(453px);
@@ -17,7 +17,7 @@
 
     &::after {
         content: "";
-        background: url(../../img/blueberry.png) center center/contain no-repeat;
+        background: url(../img/blueberry.png) center center/contain no-repeat;
         position: absolute;
         width: rem(135px);
         height: rem(112px);
@@ -32,7 +32,7 @@
 
 .arrow { 
     position: absolute;
-    top: rem(200px);
+    top: rem(236px);
     border: 0;
     background: transparent;
     outline: none;
@@ -129,13 +129,13 @@
 
 .products__img {
     position: relative;
-    background: url(../../img/granola_about.png)center center / contain no-repeat;
+    background: url(../img/granola_about.png)center center / contain no-repeat;
     width: rem(363px);
     height: rem(386px);
 
     &::before {
         content: "";
-        background: url(../../img/leaf_about_2.png) no-repeat;
+        background: url(../img/leaf_about_2.png) no-repeat;
         position: absolute;
         /* top: 0; */
         /* left: 0; */
@@ -146,9 +146,9 @@
     }
     &::after {
         content: "";
-        background: url(../../img/leaf_about.png) no-repeat;
+        background: url(../img/leaf_about.png) no-repeat;
         position: absolute;
-        top: rem(100px);
+        top: rem(64px);
         left: rem(-30px);
         right: 0;
         bottom: 0;
