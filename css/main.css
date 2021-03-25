@@ -1101,7 +1101,7 @@ img {
   border: 0;
   background: transparent;
   outline: none;
-  max-width: 939px;
+  cursor: pointer;
 }
 .arrow_next {
   right: 0;
@@ -1127,6 +1127,7 @@ img {
 
 .shop {
   display: flex;
+  justify-content: space-between;
 }
 @media screen and (max-width: 768px) {
   .shop {
@@ -1139,53 +1140,26 @@ img {
   margin-right: 5.2222222222rem;
   padding: 1.9444444444rem 0 0;
 }
-.products::before {
-  content: "";
-  background-color: #86C3D7;
-  position: absolute;
-  top: 7.9444444444rem;
-  left: 2.4444444444rem;
-  bottom: 0;
-  right: 0;
-  /* margin: auto; */
-  width: 21.1111111111rem;
-  height: 14.4444444444rem;
-  border-radius: 380px 315px 197px 96px/364px 182px 162px 121px;
-  transform: rotate(161deg);
-}
-@media screen and (max-width: 768px) {
-  .products::before {
-    top: 0;
-    left: 5.6666666667rem;
-    bottom: 14.4444444444rem;
-    right: 0;
-    margin: auto;
-  }
-}
-@media screen and (max-width: 480px) {
-  .products::before {
-    transform: rotate(167deg);
-    left: 3rem;
-    top: -0.8333333333rem;
-  }
-}
 @media screen and (max-width: 768px) {
   .products {
-    margin: 0 0 3.0555555556rem;
+    margin: 0;
     padding: 0;
-  }
-}
-@media screen and (max-width: 480px) {
-  .products {
-    margin: 0 0 1.6666666667rem;
   }
 }
 
 .products__img {
   position: relative;
-  background: url(../img/granola_about.png) center center/contain no-repeat;
   width: 20.1666666667rem;
   height: 21.4444444444rem;
+  margin-left: 1.9444444444rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .products__img {
+    margin: 0;
+  }
 }
 .products__img::before {
   content: "";
@@ -1193,22 +1167,45 @@ img {
   position: absolute;
   /* top: 0; */
   /* left: 0; */
-  bottom: -3.5555555556rem;
-  right: 0;
+  bottom: -2.5555555556rem;
+  right: -2.1111111111rem;
   width: 100px;
   height: 75px;
+}
+@media screen and (max-width: 768px) {
+  .products__img::before {
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .products__img::before {
+    right: 0;
+  }
 }
 .products__img::after {
   content: "";
   background: url(../img/leaf_about.png) no-repeat;
   position: absolute;
-  top: 3.5555555556rem;
-  left: -1.6666666667rem;
+  top: 5.5555555556rem;
+  left: -3rem;
   right: 0;
   bottom: 0;
   /* margin: auto; */
   width: 75px;
   height: 92px;
+}
+@media screen and (max-width: 480px) {
+  .products__img::after {
+    left: -0.5rem;
+    top: 3.3333333333rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  img.products__img-images {
+    margin: auto 0;
+    width: 70%;
+  }
 }
 
 .about__composition {
@@ -1223,11 +1220,20 @@ img {
   }
 }
 
+.about {
+  width: 47%;
+}
 @media screen and (max-width: 768px) {
   .about {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 75%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about {
+    width: 92%;
   }
 }
 
@@ -1305,11 +1311,12 @@ img {
   color: #292929;
   font-weight: bold;
   margin: 1.2777777778rem 0 1.2222222222rem;
+  line-height: 2rem;
 }
 @media screen and (max-width: 480px) {
   .about__title {
     text-align: center;
-    max-width: 374px;
+    width: 374px;
     line-height: 2rem;
   }
 }

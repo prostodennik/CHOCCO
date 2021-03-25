@@ -30,13 +30,14 @@
     }
 }
 
+
 .arrow { 
     position: absolute;
     top: rem(236px);
     border: 0;
     background: transparent;
     outline: none;
-    max-width: 939px;
+    cursor: pointer;
 
     @include tablets {
         
@@ -77,61 +78,34 @@
 
 .shop {
     display: flex;
-
+    justify-content: space-between;
     @include tablets {
         flex-direction: column;
         align-items: center;
     }
 }
 
+
 .products {
     margin-right: rem(94px);
     padding: rem(35px) 0 0;
 
-    &::before {
-        content: "";
-        background-color: #86C3D7;
-        position: absolute;
-        top: rem(143px);
-        left: rem(44px);
-        bottom: 0;
-        right: 0;
-        /* margin: auto; */
-        width: rem(380px);
-        height: rem(260px);
-        border-radius: 380px 315px 197px 96px/364px 182px 162px 121px;
-        transform: rotate(161deg);
-
-        @include tablets {
-            top: 0;
-            left: rem(102px);
-            bottom: rem(260px);
-            right: 0;
-            margin: auto;
-        }
-
-        @include phones {
-            transform: rotate(167deg);
-            left: rem(54px);
-            top: rem(-15px);
-        }
-    }
-
     @include tablets {
-        margin: 0 0 rem(55px);
+        margin: 0;
         padding: 0;
-    }
-
-    @include phones {
-        margin: 0 0 rem(30px);
     }
 }
 
 .products__img {
     position: relative;
-    background: url(../img/granola_about.png)center center / contain no-repeat;
     width: rem(363px);
     height: rem(386px);
+    margin-left: rem(35px);
+    display: flex; align-items: center; justify-content: center;
+
+    @include tablets {
+        margin: 0;
+    }
 
     &::before {
         content: "";
@@ -139,22 +113,41 @@
         position: absolute;
         /* top: 0; */
         /* left: 0; */
-        bottom: rem(-64px);
-        right: 0;
+        bottom: rem(-46px);
+        right: rem(-38px);
         width: 100px;
         height: 75px; 
+
+        @include tablets {
+            bottom: 0;
+        }
+
+        @include phones {
+            right: 0;
+        }
     }
     &::after {
         content: "";
         background: url(../img/leaf_about.png) no-repeat;
         position: absolute;
-        top: rem(64px);
-        left: rem(-30px);
+        top: rem(100px);
+        left: rem(-54px);;
         right: 0;
         bottom: 0;
         /* margin: auto; */
         width: 75px;
         height: 92px;
+        @include phones {
+            left: rem(-9px);
+            top: rem(60px);
+        }
+    }
+}
+
+img.products__img-images {
+    @include phones {
+    margin: auto 0;
+    width: 70%;
     }
 }
 
@@ -170,11 +163,16 @@
 }
 
 .about {
+    width: 47%;
 
     @include tablets {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 75%;
+    }
+    @include phones {
+        width: 92%;
     }
 }
 
@@ -252,10 +250,11 @@
     color: #292929;
     font-weight: bold;
     margin: rem(23px) 0 rem(22px);
+    line-height: rem(36px);
 
     @include phones {
         text-align: center;
-        max-width: 374px;
+        width: 374px;
         line-height: rem(36px);
     }
 }
