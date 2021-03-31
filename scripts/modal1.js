@@ -1,3 +1,4 @@
+
 const validateFields = (form, fildsArray) => {
      
     fildsArray.forEach((field) => {
@@ -16,11 +17,17 @@ $("#form").on("submit", function(event) {
     event.preventDefault();
     // openModal();
 
+$("#form").on("submit", function(event) {
+    event.preventDefault();
+    openModal();
+
+
     const form = $(event.currentTarget);
     const name = form.find("[name='name']");
     const phone = form.find("[name='phone']");
     const comment = form.find("[name='comment']");
     const to = form.find("[name='to']");
+
     const modal = $("#modal");
     const content = modal.find(".modal__content");
 
@@ -31,6 +38,20 @@ $("#form").on("submit", function(event) {
 
 if (isValid) {
     const request = $.ajax({
+
+    
+    [name, phone, comment, to].forEach((field) => {
+        field.removeClass("input-error");
+        if (field.val().trim() == "") {
+            field.addClass("input-error"); 
+        }
+    });
+
+const errorFields = form.find(".input-error");
+
+if (errorFields.lenght == 0) {
+    $.ajax({
+
         url: "https://webdev-api.loftschool.com/sendmail",
         method: "post",
         data: {
@@ -40,6 +61,7 @@ if (isValid) {
             to: to.val(),
         },
     });
+
     request.done(data =>{
             content.text(data.message);
     });
@@ -58,8 +80,13 @@ if (isValid) {
 
 
 function openModal(content) {
+
     $(".modal").addClass("modal--active");
     $("body").addClass("blocked");
+
+    // $(".modal").addClass("modal--active");
+    // $("body").addClass("blocked");
+
     // $.fancybox.open({
     //     src:".modal",
     //     type:"inline"

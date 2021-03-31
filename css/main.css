@@ -801,7 +801,11 @@ img {
 }
 
 .input-error {
+
   border-color: red;
+
+  border-color: magenta;
+
 }
 
 .form__controls {
