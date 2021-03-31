@@ -801,7 +801,11 @@ img {
 }
 
 .input-error {
+
+  border-color: red;
+
   border-color: magenta;
+
 }
 
 .form__controls {
@@ -1569,5 +1573,13 @@ img {
 
 .close-modal::before, .close-modal::after {
   background: #497870;
+}
+
+.modal__content {
+  text-align: center;
+}
+
+.error-modal {
+  color: red;
 }
 /*# sourceMappingURL=main.css.map */

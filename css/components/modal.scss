@@ -44,4 +44,13 @@
 
 .close-modal::before, .close-modal::after {
     background: $darkGreen;
+
+}
+
+.modal__content {
+    text-align: center;
+}
+
+.error-modal {
+    color: red;
 }
