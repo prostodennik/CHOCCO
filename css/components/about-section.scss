@@ -38,9 +38,10 @@
     background: transparent;
     outline: none;
     cursor: pointer;
+    z-index: 1;
 
     @include tablets {
-        
+        top: rem(188px);
     }
 
     &_prev {
@@ -76,7 +77,16 @@
     border-radius: 5px;
 }
 
-.shop {
+
+ .bx-wrapper {
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    
+
+.shop__item {
     display: flex;
     justify-content: space-between;
     @include tablets {
@@ -113,7 +123,7 @@
         position: absolute;
         /* top: 0; */
         /* left: 0; */
-        bottom: rem(-46px);
+        bottom: rem(-8px);
         right: rem(-38px);
         width: 100px;
         height: 75px; 
@@ -124,6 +134,7 @@
 
         @include phones {
             right: 0;
+            background-size: 75%;
         }
     }
     &::after {
@@ -131,15 +142,17 @@
         background: url(../img/leaf_about.png) no-repeat;
         position: absolute;
         top: rem(100px);
-        left: rem(-54px);;
+        left: rem(-36px);;
         right: 0;
         bottom: 0;
         /* margin: auto; */
         width: 75px;
         height: 92px;
+
         @include phones {
-            left: rem(-9px);
+            left: rem(8px);
             top: rem(60px);
+            background-size: 75%;
         }
     }
 }
