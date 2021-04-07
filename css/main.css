@@ -1617,13 +1617,13 @@ button {
 
 .section-slide {
   position: relative;
-  background: url(../../img/background.png) center/cover no-repeat;
+  background: url(../img/background.png) center/cover no-repeat;
   display: block;
   padding-top: 6.4444444444rem;
 }
 .section-slide::after {
   content: "";
-  background: url(../../img/rasspeberi.png) center center/contain no-repeat;
+  background: url(../img/rasspeberi.png) center center/contain no-repeat;
   position: absolute;
   top: -3.8888888889rem;
   left: 6.7777777778rem;

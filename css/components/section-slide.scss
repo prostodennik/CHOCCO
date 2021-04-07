@@ -4,13 +4,13 @@
 
 .section-slide {
     position: relative;
-    background:  url(../../img/background.png) center/cover no-repeat;
+    background:  url(../img/background.png) center/cover no-repeat;
     display: block;
     padding-top: rem(116px);
 
     &::after {
         content: "";
-        background: url(../../img/rasspeberi.png) center center/ contain no-repeat;
+        background: url(../img/rasspeberi.png) center center/ contain no-repeat;
         position: absolute;
         top: rem(-70px);
         left: rem(122px);
