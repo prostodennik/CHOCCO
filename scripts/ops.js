@@ -99,12 +99,12 @@ $(".wrapper").on("touchmove",e => e.preventDefault());
 
  });
 
-const mobileDetect = new MobileDetect(window.navigator.userAgent);
-const isMobile = mobileDetect.mobile();
+// const mobileDetect = new MobileDetect(window.navigator.userAgent);
+// const isMobile = mobileDetect.mobile();
 
-if (isMobile) {
-    //https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
-       $("body").swipe({
+
+    //https://github.com/mattbryson/TouchSwipe-Jquery-Plugin 
+    $("body").swipe({
          swipe: function(event,direction) {
            const scroller = viewportScroller();
            let scrollDirection = "";
@@ -115,4 +115,5 @@ if (isMobile) {
            scroller[scrollDirection](); 
          },
        });
-}
+
+       
