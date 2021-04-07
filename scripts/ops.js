@@ -4,8 +4,8 @@ const sideMenu = $(".fixed-menu__link");
 const fixedMenu = $(".fixed-menu");
 const menuItems = fixedMenu.find(".fixed-menu__item");
 
-const mobileDetect = new MobileDetect(window.navigator.userAgent);
-const isMobile = mobileDetect.mobile();
+// const mobileDetect = new MobileDetect(window.navigator.userAgent);
+// const isMobile = mobileDetect.mobile();
 
 let inScroll = false;
 
@@ -115,7 +115,7 @@ $(window).on("keydown", (e) => {
     }
 });
 
-$(".wrapper").on("touchmove", e => e.preventDefault());
+// $(".wrapper").on("touchmove", e => e.preventDefault());
 
 $("[data-scroll-to]").click(e => {
     e.preventDefault();
@@ -128,20 +128,23 @@ $("[data-scroll-to]").click(e => {
 
 });
 
-if (isMobile) {
+// if (isMobile) {
     //https://github.com/mattbryson/TouchSwipe-Jquery-Plugin 
-    $("body").swipe({
-        swipe: function (event, direction) {
-            const scroller = viewportScroller();
-            let scrollDirection = "";
+    $("body").swipe( {
+        swipe: function (
+            event, 
+            direction) {
+            // const scroller = viewportScroller();
+            // let scrollDirection = "";
 
-            if (direction == "up") scrollDirection = "next";
-            if (direction == "down") scrollDirection = "prev";
+            // if (direction == "up") scrollDirection = "next";
+            // if (direction == "down") scrollDirection = "prev";
 
-            scroller[scrollDirection]();
+            // scroller[scrollDirection]();
+            alert(direction);
         },
     });
-}
+// }
 
 
 
