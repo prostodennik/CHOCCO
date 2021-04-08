@@ -44,8 +44,8 @@
 .video__player {
     margin: 0 auto;
     position: relative;
-    width: rem(640px);
-    height: rem(360px);
+    width: rem(662px);
+    height: rem(392px);
 }
 
 .player__wrapper {
@@ -64,6 +64,7 @@
     transform: translate(-50%, -50%);
     background: url(../../img/play.png) no-repeat center;
     cursor: pointer;
+    display: none;
 }
 
 .player__controls {

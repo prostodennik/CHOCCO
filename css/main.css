@@ -1778,8 +1778,8 @@ button {
 .video__player {
   margin: 0 auto;
   position: relative;
-  width: 35.5555555556rem;
-  height: 20rem;
+  width: 36.7777777778rem;
+  height: 21.7777777778rem;
 }
 
 .player__wrapper {
@@ -1798,6 +1798,7 @@ button {
   transform: translate(-50%, -50%);
   background: url(../../img/play.png) no-repeat center;
   cursor: pointer;
+  display: none;
 }
 
 .player__controls {

@@ -119,6 +119,9 @@ $(".wrapper").on("touchmove", e => e.preventDefault());
 
 $("[data-scroll-to]").click(e => {
     e.preventDefault();
+    //moal close mobile
+    modalMenu.style.display = "none";
+    body.style.overflow = "";
 
     const $this = $(e.currentTarget);
     const target = $this.attr("data-scroll-to");
