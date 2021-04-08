@@ -1,9 +1,19 @@
-// let player;
+
 
 const playerContainer = document.querySelector(".video__player");
 const playerStart = document.querySelector(".player__start");
 const playerWrapper = document.querySelector(".player__wrapper");
 const video = document.querySelector(".video");
+const playerPlay = document.querySelector(".player__play");
+const playerPlayback = document.querySelector(".player__playback-line");
+const playerPlaybackBtn = document.querySelector(".player__playback-button");
+const playerPlaybackIcon = document.querySelector(".player__sound-icon");
+const playerPlaybackIconMute = document.querySelector(".player__sound-icon-mute");
+const soundLine = document.querySelector(".player__sound-line");
+const soundBtn = document.querySelector(".player__sound-button");
+let startVolume = 0;
+let currentVolume;
+
 
 const hadleStart = () => {
     if (video.paused) {
@@ -13,20 +23,74 @@ const hadleStart = () => {
     }
 }
 
-playerStart.addEventListener('click', hadleStart);
-playerWrapper.addEventListener('click', hadleStart);
+playerPlay.addEventListener("click", hadleStart);
+playerStart.addEventListener("click", hadleStart);
+playerWrapper.addEventListener("click", hadleStart);
 
 video.onplay = () => {
     playerStart.classList.add("paused");
-    playerStart.classList.remove("player__start")
+    playerStart.classList.remove("player__start");
+    playerPlay.classList.add("player__play-none");
 }
 video.onpause = () => {
     playerStart.classList.remove("paused");
-    playerStart.classList.add("player__start")
+    playerStart.classList.add("player__start");
+    playerPlay.classList.remove("player__play-none");
+}
+
+const changeVolume = (e) => {
+    const currentTarget = e.currentTarget;
+    const left = currentTarget.getBoundingClientRect().left;
+    const soundLineWidth = parseInt(getComputedStyle(currentTarget).width);
+    const newPosition = e.pageX - left;
+    const percentValue = (newPosition / soundLineWidth) * 100;
+
+    video.volume = percentValue / 100;
+    soundBtn.style.left = `${percentValue}%`;
+}
+
+const toogleSound = () => {
+        playerPlaybackIcon.classList.toggle("sound-none");
+        playerPlaybackIconMute.classList.toggle("sound-mute");
+
+        if (video.volume == 0) {
+            video.volume = currentVolume;
+            soundBtn.style.left = `${currentVolume * 100}%`;
+        } else {
+            currentVolume = video.volume;
+            video.volume = startVolume;
+            soundBtn.style.left = `${startVolume}%`;
+    }
 }
 
 
+soundLine.addEventListener("click", changeVolume);
+playerPlaybackIcon.addEventListener("click", toogleSound);
+playerPlaybackIconMute.addEventListener("click", toogleSound);
 
+const handleDuration = (e) => {
+    const barSize = parseInt(getComputedStyle(playerPlayback).width);
+    const circleWidth = parseInt(getComputedStyle(playerPlaybackBtn).width);
+    const offsetX = e.offsetX;
+    const newSize = offsetX + circleWidth / 2;
+    const newTime = (newSize * video.duration) / barSize;
+    video.currentTime = newTime;
+}
+
+const updateTime = () => {
+    let bar = video.currentTime / video.duration;
+    playerPlaybackBtn.style.left = `${bar * 100}%`;
+
+    if (video.ended) {
+        video.currentTime = 0;
+    }
+}
+
+playerPlayback.addEventListener("click", handleDuration);
+video.addEventListener("timeupdate", updateTime);
+//youTube API
+
+// let player;
 
 // const playerContainer = $(".player__start");
 // const video = $(".video");

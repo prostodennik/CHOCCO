@@ -41,6 +41,19 @@
     }
 }
 
+.video {
+    @include phones {
+        display: none;
+    }
+}
+
+.video-mobile {
+    display: none;
+    @include phones {
+        display: block;
+    }
+}
+
 .video__player {
     margin: 0 auto;
     position: relative;
@@ -57,14 +70,17 @@
 
 .player__play {
     position: absolute;
-    min-width: 100%;
-    height: 100%;
+    min-width: rem(80px);
+    height: rem(120px);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: url(../../img/play.png) no-repeat center;
     cursor: pointer;
-    display: none;
+}
+
+.player__play-none {
+    background: transparent;
 }
 
 .player__controls {
@@ -133,10 +149,6 @@
 }
 
 
-.player__play-none {
-    background: transparent;
-}
-
 .player__playback {
     display: flex;
     align-items: center;
@@ -166,6 +178,30 @@
     width: rem(13px);
     height: rem(16px);
     fill: #626262;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.sound-none {
+    display: none;
+}
+
+.player__sound-icon-mute {
+    cursor: pointer;
+    width: rem(13px);
+    height: rem(16px);
+    fill: #626262;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+}
+
+.sound-mute{
+    display: block;
 }
 
 .player__sound-line {
@@ -178,7 +214,7 @@
 
 .player__sound-button {
     bottom: rem(-5px);
-    right: 0%;
+    right: 0%; 
     display: block;
     background-color: #626262;
     width: rem(15px);

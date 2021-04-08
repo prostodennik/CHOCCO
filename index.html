@@ -696,10 +696,13 @@
                     <div class="video__player">
                         <div class="player__wrapper">
                           <!-- <div id="yt-player"></div> -->
-                          <video class="video" width="662px" height="420px" preload="auto" poster="">
+                          <video class="video" width="662px" height="420px" preload="auto" poster="./img/background_3.png">
                             <source src="./video/IMG_1884 (convert-video-online.com).mp4" type="video/mp4">
                         </video>
-                          <div class="player__play"></div>
+                          <video class="video video-mobile" width="394px" height="234px" preload="auto" poster="./img/background_3.png">
+                            <source src="./video/IMG_1884 (convert-video-online.com).mp4" type="video/mp4">
+                        </video>
+                          <button class="player__play"></button>
                         </div>
                         <div class="player__controls">
                           <button class="player__start"></button>
@@ -709,6 +712,9 @@
                           <div class="player__sound">
                             <svg class="player__sound-icon">
                               <use xlink:href="./img/sprite.svg#sound"></use>
+                            </svg>
+                            <svg class="player__sound-icon-mute">
+                              <use xlink:href="./img/sprite.svg#mute"></use>
                             </svg>
                           </div>
                           <div class="player__sound-line">
