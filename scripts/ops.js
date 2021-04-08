@@ -138,10 +138,14 @@ if (isMobile) {
             const scroller = viewportScroller();
             let scrollDirection = "";
 
-            if (direction == "up") scrollDirection = "next";
-            if (direction == "down") scrollDirection = "prev";
-
-            scroller[scrollDirection]();
+            if (direction == "up") {
+                scrollDirection = "next";
+                scroller[scrollDirection]();
+            };
+            if (direction == "down") {
+                scrollDirection = "prev";
+                scroller[scrollDirection]();
+            };
         },
     });
 }

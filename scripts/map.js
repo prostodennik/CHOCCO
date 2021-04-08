@@ -4,6 +4,7 @@ const init = () => {
    center: [59.93916998692174, 30.309015096732622],
    zoom: 11,
    controls: [],
+   garg: false,
  });
  
  let coords = [

@@ -1775,10 +1775,9 @@ button {
   height: 4.2777777778rem;
 }
 
-@media screen and (max-width: 480px) {
-  .video {
-    display: none;
-  }
+.video {
+  width: 100%;
+  height: auto;
 }
 
 .video-mobile {
@@ -1791,10 +1790,21 @@ button {
 }
 
 .video__player {
+  width: 662px;
   margin: 0 auto;
   position: relative;
-  width: 36.7777777778rem;
-  height: 21.7777777778rem;
+}
+@media screen and (max-width: 768px) {
+  .video__player {
+    min-width: 26.6666666667rem;
+    max-width: 594px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .video__player {
+    width: 80%;
+    min-width: initial;
+  }
 }
 
 .player__wrapper {
@@ -1806,12 +1816,12 @@ button {
 
 .player__play {
   position: absolute;
-  min-width: 4.4444444444rem;
-  height: 6.6666666667rem;
+  width: 100%;
+  height: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: url(../../img/play.png) no-repeat center;
+  background: url(../../img/player.png) center center/cover no-repeat;
   cursor: pointer;
 }
 
@@ -1825,20 +1835,22 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
-  top: 100%;
+  position: relative;
   padding: 0.5rem 0.9444444444rem;
   height: 25px;
 }
 
 .player__sound {
   display: flex;
+  width: 1.1111111111rem;
+  margin-right: 1.1111111111rem;
 }
 
 .player__start {
   height: 16px;
   position: relative;
   overflow: hidden;
+  margin-right: 1.1111111111rem;
 }
 .player__start:after {
   content: "";
@@ -1860,6 +1872,7 @@ button {
   height: 16px;
   border: none;
   position: relative;
+  margin-right: 1.1111111111rem;
 }
 .paused::before, .paused::after {
   content: "";
@@ -1885,8 +1898,9 @@ button {
 .player__playback-line {
   position: relative;
   cursor: pointer;
-  width: 446px;
+  flex: 1;
   height: 0.2777777778rem;
+  margin-right: 1.1111111111rem;
   background-color: #626262;
 }
 
@@ -1950,4 +1964,3 @@ button {
   border-radius: 50%;
   position: absolute;
 }
-/*# sourceMappingURL=main.css.map */

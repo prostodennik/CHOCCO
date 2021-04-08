@@ -23,7 +23,10 @@ const hadleStart = () => {
     }
 }
 
-playerPlay.addEventListener("click", hadleStart);
+playerPlay.addEventListener("click", e => {
+    e.stopPropagation();
+    hadleStart();
+});
 playerStart.addEventListener("click", hadleStart);
 playerWrapper.addEventListener("click", hadleStart);
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <title>CHOCCO</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"
         integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg=="
@@ -280,7 +280,7 @@
                                     </ul>
                                     <div class="price">
                                         <p class="price__item">140 ₽</p>
-                                        <a href="#" class="btn btn_theme_green">ЗАКАЗАТЬ</a>
+                                        <a href="#" data-scroll-to="order" class="btn btn_theme_green">ЗАКАЗАТЬ</a>
                                     </div>
                                 </div>
                             </div>
@@ -381,7 +381,7 @@
                                     </ul>
                                     <div class="price">
                                         <p class="price__item">140 ₽</p>
-                                        <a href="#" class="btn btn_theme_green">ЗАКАЗАТЬ</a>
+                                        <a href="#" data-scroll-to="order" class="btn btn_theme_green">ЗАКАЗАТЬ</a>
                                     </div>
                                 </div>
                             </div>
@@ -696,10 +696,7 @@
                     <div class="video__player">
                         <div class="player__wrapper">
                           <!-- <div id="yt-player"></div> -->
-                          <video class="video" width="662px" height="420px" preload="auto" poster="./img/background_3.png">
-                            <source src="./video/IMG_1884 (convert-video-online.com).mp4" type="video/mp4">
-                        </video>
-                          <video class="video video-mobile" width="394px" height="234px" preload="auto" poster="./img/background_3.png">
+                          <video class="video" preload="auto" poster="./img/background_3.png">
                             <source src="./video/IMG_1884 (convert-video-online.com).mp4" type="video/mp4">
                         </video>
                           <button class="player__play"></button>
