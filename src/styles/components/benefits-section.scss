@@ -1,0 +1,30 @@
+.benefits-section {
+    position: relative;
+    background: url(../img/pattern_leaf.svg) left top 57% no-repeat;
+
+    @include tablets {
+        background-position: left top 10%;
+    }
+
+    @include phones {
+        background: none;
+    }
+
+    &::before {
+        content: url(../img/raspberries.svg);
+        position: absolute;
+        bottom: rem(-150px);
+        left: 0;
+        z-index: 1;
+        // content: "";
+        // background: url(../img/raspberries.svg) center center/contain no-repeat;
+        // position: absolute;
+        // width: rem(196px);
+        // height: rem(453px);
+        // bottom: rem(-222px);
+
+        @include phones {
+            display: none;
+        }
+    }
+}

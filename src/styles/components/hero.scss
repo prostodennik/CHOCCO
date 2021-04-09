@@ -1,0 +1,132 @@
+.hero {
+    // background: url(../img/granola_bar.png)right center / 40% auto no-repeat , 
+    background: url(../img/pattern.png)right bottom no-repeat;
+    background-color: $blue;
+    // height: 100vh;
+    height: 100%;
+    min-height: rem(650px);
+    color: #fff;
+    padding: rem(25px) 0 rem(65px);
+    position: relative;
+
+    @include tablets {
+        background-position: right bottom 71%;
+        // padding-bottom: rem(180px);
+    }
+
+    @include phones {
+        background-size: contain;
+        // padding-bottom: rem(100px);
+    }
+
+    // &::before {
+    //     position: absolute;
+    //     bottom: rem(-60px);
+    //     left: 2%;
+    //     content: url(../../img/leaf_3.svg);
+    // }
+
+    // &::after {
+    //     content: url(../../img/berries-1.svg) url(../../img/leaf_2.svg) url(../../img/leaf_1.svg) url(../../img/berries_2.svg);
+    //     position: absolute;
+    //     bottom: rem(-40px);
+    //     right: 8%;
+    //     column-count: 2;
+    //     width: rem(400px);
+    // }
+}
+
+.hero__title-section {
+    width: 46%;
+    
+    @include tablets {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &::before {
+            content: "";
+            display: block;
+            background: url(../img/comp768.png) center center / contain no-repeat;
+            width: 75%;
+            height: rem(385px);
+        }
+    }
+    @include phones {
+        &::before {
+            width: 75%;
+            height: rem(338px);
+        }
+    }
+}
+
+.hero__icons-section {
+    @include tablets {
+        display: none;
+    }
+}
+
+.hero__container {
+    background: url(../img/granola_bar.png)right center / 50% auto no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    @include tablets {
+        background: none;
+    }
+
+    &::before, &::after {
+        @include tablets {
+            display: none;
+        }
+    }
+
+    &::before {
+        position: absolute;
+        bottom: rem(-80px);
+        left: -5%;
+        content: url(../img/leaf_3.svg);
+    }
+
+    &::after {
+        content: url(../img/berries-1.svg) url(../img/leaf_2.svg) url(../img/leaf_1.svg) url(../img/berries_2.svg);
+        position: absolute;
+        bottom: rem(-70px);
+        right: 0%;
+        column-count: 2;
+        width: rem(400px);
+    }
+}
+
+.hero__main-title {
+    font-size: rem(48px);
+    line-height: 1.1;
+    font-weight: bold;
+    margin-bottom: rem(15px);
+    text-transform: uppercase;
+
+    @include tablets {
+    margin-bottom: rem(4px);
+    }
+
+    @include phones {
+        font-size: rem(45px);
+    }
+}
+
+.hero__title-desc {
+    font-size: rem(21px);
+    margin-bottom: rem(30px);
+    max-width: 371px;
+
+    @include tablets {
+        max-width: 350px;
+        margin-bottom: rem(23px);
+    }
+}

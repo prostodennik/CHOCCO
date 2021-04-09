@@ -1,0 +1,64 @@
+.fullscreen-menu {
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: #313131;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+
+.menu_mobile {
+    display: block;
+    padding: rem(135px) 0 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+.menu__list_mobile {
+    flex-direction: column;
+    font-size: 2rem;
+    align-items: center;
+    display: flex;
+    margin: 0;
+}
+
+.menu__item_mobile {
+    margin: 0 0 rem(20px);
+}
+
+.close{
+    position: fixed;
+    top: rem(5px);
+    right: rem(5px);
+    width: rem(20px);
+    height: rem(20px);
+    cursor: pointer;
+    margin: rem(30px) rem(42px) 0 0;
+}
+
+.close:before,
+.close:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: rem(20px);
+    height: rem(4px);
+    background: #fff;
+    border-radius: 5px;
+    left: 0;
+    margin: auto;
+    bottom: 0;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}
