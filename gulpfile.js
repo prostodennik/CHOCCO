@@ -41,6 +41,20 @@ const styles = [
     'src/styles/main.scss'
 ];
 
+// task ('styles',  () => {
+//     return src(styles)
+//     .pipe(sourcemaps.init())
+//     .pipe(concat('main.scss'))
+//     .pipe(sassGlob())
+//     .pipe(sass().on('error', sass.logError))
+//     .pipe(autoprefixer({
+//         cascade: false
+//     }))
+//     .pipe(cleanCSS())
+//     .pipe(sourcemaps.write())
+//     .pipe(dest('dist'));
+// });
+
 task ('styles',  () => {
     return src(styles)
     .pipe(sourcemaps.init())
@@ -52,7 +66,8 @@ task ('styles',  () => {
     }))
     .pipe(cleanCSS())
     .pipe(sourcemaps.write())
-    .pipe(dest('dist'));
+    .pipe(dest('dist/css'))
+    .pipe(reload({ stream: true }));
 });
 
 task('scripts', () => {
