@@ -44,6 +44,10 @@
 .video {
     width: 100%;
     max-height: rem(372px);
+
+    @include phones {
+        max-height: rem(160px);
+    }
 }
 
 .video-mobile {
@@ -64,7 +68,8 @@
     }
 
     @include phones {
-        width: 80%;
+        width: 60%;
+        height: 89%;
         min-width: initial;
     }
 }
@@ -99,7 +104,9 @@
     justify-content: space-between;
     position: relative;
     padding: rem(9px) rem(17px);
-    height: 25px;
+    height: 25px; 
+    position: absolute;
+    bottom: 0;
 }
 
 
@@ -115,6 +122,7 @@
    position: relative;
    overflow: hidden;
    margin-right: rem(20px);
+   width: 14px;
 
    &:after {
     content: "";
@@ -131,13 +139,18 @@
     margin: auto;
     border-radius: 2px;
    }
+   @include phones {
+    //    margin-right: 4px;
+       padding-right: 0;
+   }
 }
 .paused {
-    // width: 14px;
+    width: 14px;
     height: 16px;
     border: none;
     position: relative;
     margin-right: rem(20px);
+    padding: 0;
 
     &::before,
     &::after {
@@ -148,6 +161,7 @@
         top: 0;
         bottom: 0;
         background: #626262;
+        margin-right: 2px;
     }
 
     &::after {
@@ -175,14 +189,17 @@
 }
 
 .player__playback-button {
-    bottom: rem(-5px);
+    // bottom: rem(-5px);
     left: 0%;
     display: block;
     background-color: #626262;
     width: 15px;
     height: 15px;
+    top: 50%;
+    transform: translateY(-50%);
     border-radius: 50%;
     position: absolute;
+    padding: 0;
 }
 
 .player__sound-icon {
@@ -225,12 +242,16 @@
 }
 
 .player__sound-button {
-    bottom: rem(-5px);
-    right: 0%; 
+    // bottom: rem(-5px);
+    right: 0; 
+    top: 50%;
+    transform: translateY(-50%);
     display: block;
     background-color: #626262;
     width: 15px;
     height: 15px;
     border-radius: 50%;
     position: absolute;
+    padding: 0;
+
 }

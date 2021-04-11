@@ -9,6 +9,9 @@
     margin-bottom: rem(7px);
     overflow: hidden;
     position: relative;
+    @include phones {
+        padding: rem(50px) rem(25px) rem(30px);
+    }
 
     &::before{
         content: "";
@@ -29,9 +32,6 @@
     // }
 }
 
-.reviews__display-inner {
-    min-height: 280px;
-}
 
 .reviews__item.active {
     display: flex;

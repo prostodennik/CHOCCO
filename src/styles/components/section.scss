@@ -13,6 +13,9 @@
             color: inherit;
         }
     }
+    @include phones {
+        min-height: auto;
+    }
 }
 
 .section__title {
@@ -25,5 +28,6 @@
 
     @include phones {
         font-size: rem(40px);
+        line-height: 1;
     }
 }

@@ -66,6 +66,9 @@
         padding: rem(8px) rem(10px);
         font-size: rem(14px);
     }
+    @include phones {
+        font-size: 16px;
+    }
 }
 
 .input-error {

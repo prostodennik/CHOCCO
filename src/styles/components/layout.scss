@@ -6,8 +6,8 @@ html {
     }
 
     @include phones {
-        font-size: $baseFontSize - 2px;
-        font-size: 2.3vmax;
+        // font-size: $baseFontSize - 2px;
+        font-size: 2.1vmax;
     }
 }
 
@@ -100,4 +100,8 @@ button {
     background: transparent;
     cursor: pointer;
     outline: none;
+}
+
+.bx-wrapper {
+    margin-bottom: 0;
 }

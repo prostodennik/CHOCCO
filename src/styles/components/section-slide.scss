@@ -51,6 +51,9 @@
 .slide-menu__title {
     position: relative;
     min-width: rem(102px);
+    @include phones {
+        min-width: rem(90px);
+    }
 }
 
 .slide-menu__content {
@@ -66,7 +69,7 @@
 }
 
 .slide-menu__container {
-    padding: 30px 80px 424px 38px;
+    padding: 30px 20px 424px 38px;
 }
 
 .slide-menu__close {
@@ -124,4 +127,7 @@
     height: 100%;
     object-fit: cover;
     filter: brightness(0.7);
+    @include phones {
+        width: rem(90px);
+    }
 }

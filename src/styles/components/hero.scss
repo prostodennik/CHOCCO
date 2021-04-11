@@ -6,7 +6,7 @@
     height: 100%;
     min-height: rem(650px);
     color: #fff;
-    padding: rem(25px) 0 rem(65px);
+    padding: rem(25px) 0 rem(45px);
     position: relative;
 
     @include tablets {
@@ -59,7 +59,8 @@
     @include phones {
         &::before {
             width: 75%;
-            height: rem(338px);
+            height: rem(300px);
+            margin-bottom: rem(20px);
         }
     }
 }
