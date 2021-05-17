@@ -41,7 +41,7 @@
     z-index: 1;
 
     @include tablets {
-        top: rem(188px);
+        top: rem(118px);
     }
 
     &_prev {
@@ -270,7 +270,7 @@ img.products__img-images {
 
     @include phones {
         text-align: center;
-        width: 374px;
+        width: rem(374px);
         line-height: rem(36px);
     }
 }
